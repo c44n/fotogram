@@ -13,17 +13,27 @@ let images = [
     "cc1d7f8870c4b98e849a8e36c6c397e0f71486f9.jpg",
 ];
 
-
 function renderImages() {
     let contentRef = document.getElementById('image_wrapper');
     contentRef.innerHTML = "";
 
     for (let i = 0; i < images.length; i++) {
+        let id = i;
         contentRef.innerHTML += `
-            <article class="gallery__image_box border">
+            <article class="gallery__image_box border"  onclick="openDialog(${[id]})" data-id="${[i]}">
                 <img src="images/${images[i]}" alt="" class="image_box__img">
             </article>
         `;
         // console.log(images[i]);
     }
+}
+
+const dialogRef = document.getElementById('imageDialog');
+
+function openDialog(id){
+    dialogRef.showModal();
+}
+
+function closeDialog(id){
+    dialogRef.close();
 }

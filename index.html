@@ -8,7 +8,7 @@
 
 
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 
 <body onload="renderImages()">
@@ -33,9 +33,17 @@
             </div>
 
             <div class="dialog-wrapper" id="dialog_wrapper">
-                <dialog class="image-dialog">
+                <dialog class="image-dialog" id="imageDialog">
                     <header>
+                        <div class="image_dialog__header-wrapper">
+                            <div class="image_dialog__header-wrapper_title">
 
+                            </div>
+                            <div class="image_dialog__header-wrapper_close_btn">
+                                <img src="" alt="Dialog Close Button">
+                            </div>
+                        </div>
+                        <h5>test</h5>
                     </header>
 
                     <section>
@@ -43,7 +51,7 @@
                     </section>
 
                     <footer>
-                        <button>Close</button>
+                        <button onclick="closeDialog()">Close</button>
                     </footer>
                 </dialog>
             </div>
