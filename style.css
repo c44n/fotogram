@@ -5,6 +5,15 @@
     --gray: #627B84;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
 body {
     background-color: var(--secondary-color);
     font-family: Arial, Helvetica, sans-serif;
@@ -64,6 +73,7 @@ section {
     border: 2px solid var(--primary-color);
     border-radius: 16px;
     transition: .2s ease-out;
+    cursor: pointer;
 }
 
 /* @media screen and (min-width: 320px) {
@@ -93,6 +103,86 @@ section {
 }
 
 
+/* Dialog Styling */
+
+.image-dialog {
+    width: 350px;
+    background: var(--secondary-color);
+    border: 0;
+    border-radius: 30px;
+    overflow: hidden;
+    color: var(--white);
+    background-color: #06171E;
+    padding: 40px;
+}
+
+.image-dialog::backdrop {
+    background-color: #0000006c;
+    backdrop-filter: blur(10px);
+}
+
+.image-dialog__header {
+    padding: 0;
+}
+
+.image_dialog__header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.dialog_close_btn {
+    width: 10px;
+    cursor: pointer;
+}
+
+.dialog_image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.dialog_footer_arrow-wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog_footer__arrow_icon_wrapper {
+    display: flex;
+    background: #fd5b4f26;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dialog_footer__right-arrow {
+    width: 14px;
+}
+
+.dialog_footer__left-arrow {
+    width: 14px;
+    rotate: 180deg;
+}
+
+.dialog_footer__image-counter {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 12px;
+}
+
+.footer__dialog {
+    position: relative;
+    width: 100%;
+}
+
+
 
 footer {
     position: absolute;
@@ -114,6 +204,6 @@ footer {
 }
 
 .imprint_text {
-    font-size: 11px; 
+    font-size: 11px;
     color: var(--gray);
 }

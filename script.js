@@ -24,7 +24,6 @@ function renderImages() {
                 <img src="images/${images[i]}" alt="" class="image_box__img">
             </article>
         `;
-        // console.log(images[i]);
     }
 }
 
@@ -32,8 +31,17 @@ const dialogRef = document.getElementById('imageDialog');
 
 function openDialog(id){
     dialogRef.showModal();
+    loadImageInDialog(id);
 }
 
-function closeDialog(id){
+function closeDialog(){
     dialogRef.close();
+}
+
+function loadImageInDialog(id){
+    let contentRef = document.getElementById('dialog_image_wrapper');
+    contentRef.innerHTML = `
+    <img src="images/${images[id]}" class="dialog_image"
+                            alt="Image Dialog Big Size">
+    `;
 }

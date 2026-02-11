@@ -34,24 +34,39 @@
 
             <div class="dialog-wrapper" id="dialog_wrapper">
                 <dialog class="image-dialog" id="imageDialog">
-                    <header>
+                    <header class="image-dialog__header">
                         <div class="image_dialog__header-wrapper">
                             <div class="image_dialog__header-wrapper_title">
-
+                                <h4>ImageTitle</h4>
                             </div>
                             <div class="image_dialog__header-wrapper_close_btn">
-                                <img src="" alt="Dialog Close Button">
+                                <img class="dialog_close_btn" src="images/close.svg" alt="Dialog Close Button"
+                                    onclick="closeDialog()">
                             </div>
                         </div>
-                        <h5>test</h5>
                     </header>
 
                     <section>
-
+                        <div id="dialog_image_wrapper">
+                            <img src="images/3c416b08502bf2ed10a304bdce5c1c782b99c40d.jpg" class="dialog_image"
+                                alt="Image Dialog Big Size">
+                        </div>
                     </section>
 
-                    <footer>
-                        <button onclick="closeDialog()">Close</button>
+                    <footer class="footer__dialog">
+                        <div class="dialog_footer_arrow-wrapper">
+                            <div class="dialog_footer__arrow_icon_wrapper">
+                                <img src="images/Arrow-Right.svg" class="dialog_footer__left-arrow"
+                                    alt="Vorheriges Bild ansehen">
+                            </div>
+
+                            <div class="dialog_footer__image-counter">1/1</div>
+
+                            <div class="dialog_footer__arrow_icon_wrapper">
+                                <img src="images/Arrow-Right.svg" class="dialog_footer__right-arrow"
+                                    alt="Nächstes Bild ansehen">
+                            </div>
+                        </div>
                     </footer>
                 </dialog>
             </div>
