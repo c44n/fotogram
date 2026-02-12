@@ -146,7 +146,14 @@ section {
 
 .dialog_close_btn {
     width: 10px;
+    padding: 6px;
+    border-radius: 50%;
     cursor: pointer;
+    transition: .1s ease-in;
+}
+
+.dialog_close_btn:hover {
+    background: var(--primary-color);
 }
 
 .dialog_image {
@@ -160,22 +167,6 @@ section {
     align-content: center;
     justify-content: center;
     align-items: center;
-}
-
-.image_dialog__header-wrapper_close_btn {
-    display: flex;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: .1s ease-in;
-}
-
-.image_dialog__header-wrapper_close_btn:hover {
-    background: var(--primary-color);
 }
 
 .dialog_footer__arrow_icon_wrapper {

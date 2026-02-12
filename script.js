@@ -46,10 +46,9 @@ function loadImageInDialog(id) {
                 <div class="image_dialog__header-wrapper_title">
                     <h4>${images[id]}</h4>
                 </div>
-                <div class="image_dialog__header-wrapper_close_btn">
-                    <img class="dialog_close_btn" src="images/close.svg" alt="Dialog Close Button"
-                        onclick="closeDialog()">
-                </div>
+                <img class="dialog_close_btn" src="images/close.svg" alt="Dialog Close Button"
+                    onclick="closeDialog()">
+               
             </div>
         </header>
 
@@ -66,7 +65,7 @@ function loadImageInDialog(id) {
                         alt="Vorheriges Bild ansehen">
                 </div>
 
-                <div class="dialog_footer__image-counter">${id+1}/${images.length}</div>
+                <div class="dialog_footer__image-counter">${id + 1}/${images.length}</div>
 
                 <div class="dialog_footer__arrow_icon_wrapper">
                     <img src="images/Arrow-Right.svg" class="dialog_footer__right-arrow"
