@@ -29,19 +29,50 @@ function renderImages() {
 
 const dialogRef = document.getElementById('imageDialog');
 
-function openDialog(id){
+function openDialog(id) {
     dialogRef.showModal();
     loadImageInDialog(id);
 }
 
-function closeDialog(){
+function closeDialog() {
     dialogRef.close();
 }
 
-function loadImageInDialog(id){
-    let contentRef = document.getElementById('dialog_image_wrapper');
-    contentRef.innerHTML = `
-    <img src="images/${images[id]}" class="dialog_image"
-                            alt="Image Dialog Big Size">
+function loadImageInDialog(id) {
+    let contentRef = document.getElementById('dialogImageInner');
+    contentRef.innerHTML = `    
+        <header class="image-dialog__header">
+            <div class="image_dialog__header-wrapper">
+                <div class="image_dialog__header-wrapper_title">
+                    <h4>${images[id]}</h4>
+                </div>
+                <div class="image_dialog__header-wrapper_close_btn">
+                    <img class="dialog_close_btn" src="images/close.svg" alt="Dialog Close Button"
+                        onclick="closeDialog()">
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div id="dialog_image_wrapper">
+                <img src="images/${images[id]}" class="dialog_image" alt="Image Dialog Big Size">
+            </div>
+        </section>
+
+        <footer class="footer__dialog">
+            <div class="dialog_footer_arrow-wrapper">
+                <div class="dialog_footer__arrow_icon_wrapper">
+                    <img src="images/Arrow-Right.svg" class="dialog_footer__left-arrow"
+                        alt="Vorheriges Bild ansehen">
+                </div>
+
+                <div class="dialog_footer__image-counter">${id+1}/${images.length}</div>
+
+                <div class="dialog_footer__arrow_icon_wrapper">
+                    <img src="images/Arrow-Right.svg" class="dialog_footer__right-arrow"
+                        alt="Nächstes Bild ansehen">
+                </div>
+            </div>
+        </footer>
     `;
 }
