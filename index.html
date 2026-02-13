@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotogram</title>
+    <title  tabindex="0" aria-label="Fotogram Logo-Bild">Fotogram</title>
 
 
     <link rel="stylesheet" href="./style.css">
@@ -21,27 +21,21 @@
     <main>
         <section class="gallery">
             <div class="fg_container">
-                <h2 class="title">Your personal photo album</h2>
+                <h2 tabindex="0" aria-label="Content Titel" class="title">Your personal photo album</h2>
 
-                <div class="gallery__image_wrapper" id="image_wrapper">
-
-                    <article class="gallery__image_box border">
-                        <img src="images/chian88-paper-items-2412978_640.jpg" alt="" class="image_box__img">
-                    </article>
-
-                </div>
+                <div class="gallery__image_wrapper" id="image_wrapper"></div>
             </div>
 
-            <div class="dialog-wrapper" id="dialog_wrapper">
-                <dialog class="image-dialog" id="imageDialog">
-                    <div id="dialogImageInner"></div>
+            <div onkeypress="enterKey(event)"  class="dialog-wrapper" id="dialog_wrapper">
+                <dialog class="image_dialog" id="imageDialog" aria-labelledby="dialogTitle">
+                    <div id="dialogImageInner" class="dialogImageInner"></div>
                 </dialog>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="fg_container__xxl bg-blue">
+    <footer class="footer__bg">
+        <div class="fg_container__xxl">
             <div class="footer_logo_block">
                 <img src="images\Logo.png" alt="Logo" class="footer_logo">
 
